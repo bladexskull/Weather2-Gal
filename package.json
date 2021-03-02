@@ -20,6 +20,10 @@
     "@angular/platform-browser-dynamic": "~10.1.2",
     "@angular/router": "~10.1.2",
     "@fullcalendar/timegrid": "^5.3.1",
+<<<<<<< HEAD
+=======
+    "bootstrap": "^4.6.0",
+>>>>>>> SomeEdits
     "jquery": "^3.5.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

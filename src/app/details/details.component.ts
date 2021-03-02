@@ -7,21 +7,54 @@ import { ClimateService } from '../climate.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
+<<<<<<< HEAD
   DataTable: any;
+=======
+  // DataTable: any;
+  // WeatherData: any;
+  // lat;
+  // lon;
+  // weather: any;
+
+
+>>>>>>> SomeEdits
   WeatherData: any;
   lat;
   lon;
   weather: any;
+<<<<<<< HEAD
 
   hello: string = "I am INC";
   bye: string = "I am DEC";
 
   isShowDiv = false;
+=======
+  // isShowDiv = true;
+  hello: string = "I am INC";
+  bye: string = "I am DEC";
+  title = 'weather';
+  isNight:boolean=true;
+  isDay:boolean=false;
+  isCloud:boolean=false;
+  temp_celcius:any;
+  temp_min:any;
+  temp_max:any;
+  name:any;
+  country:string;
+  humidity:any;
+  showweather:boolean=false;
+
+  // hello: string = "I am INC";
+  // bye: string = "I am DEC";
+
+  // isShowDiv = false;
+>>>>>>> SomeEdits
 
   constructor(private climateService: ClimateService) { }
 
   ngOnInit(): void {
    
+<<<<<<< HEAD
     // $('.form-btn').click(function(){
     //   $(this).next().toggleClass('show-form');
     //   });
@@ -130,25 +163,45 @@ export class DetailsComponent implements OnInit {
   //             })
   //         })
   //     });
+=======
+>>>>>>> SomeEdits
 
   this.climateService.sendGetRequest().subscribe((data: any[])=>{
     console.log(data);
     this.weather = data;
   }) 
+<<<<<<< HEAD
 
   }
 
+=======
+  this.getCity(this.climateService.cityname);
+  this.showweather=this.climateService.weathershowdetails;
+  }
+  
+>>>>>>> SomeEdits
   setWeatherData(data) {
     this.weather = data;
     let sunsetTime = new Date(this.weather.sys.sunset * 1000);
     this.weather.sunset_time = sunsetTime.toLocaleTimeString();
     let currentDate = new Date();
+<<<<<<< HEAD
     this.weather.isDay = (currentDate.getTime() < sunsetTime.getTime());
     this.weather.isNight = (currentDate.getTime() > sunsetTime.getTime());
     this.weather.isCloud = (currentDate.getTime() > sunsetTime.getTime());
     this.weather.temp_celcius = ((5/9) * (this.weather.main.temp - 32)).toFixed(0);
     this.weather.temp_min = ((5/9) * (this.weather.main.temp_min - 32)).toFixed(0);
     this.weather.temp_max = ((5/9) * (this.weather.main.temp_max - 32)).toFixed(0);
+=======
+    this.isDay = (currentDate.getTime() < sunsetTime.getTime());
+    this.isNight = (currentDate.getTime() > sunsetTime.getTime());
+    this.isCloud = (currentDate.getTime() > sunsetTime.getTime());
+    this.temp_celcius = ((5/9) * (this.weather.main.temp - 32)).toFixed(0);
+    this.temp_min = ((5/9) * (this.weather.main.temp_min - 32)).toFixed(0);
+    this.temp_max = ((5/9) * (this.weather.main.temp_max - 32)).toFixed(0);
+    this.showweather=true;
+    this.climateService.weatherdetails=data;
+>>>>>>> SomeEdits
   }
 
    getCity(city) {
@@ -158,6 +211,7 @@ export class DetailsComponent implements OnInit {
     })
   }
 
+<<<<<<< HEAD
   // setWeatherData1(data1) {
   //   this.weather1 = data1;
   //   let sunsetTime = new Date(this.weather1.sys.sunset * 1000);
@@ -335,4 +389,17 @@ export class DetailsComponent implements OnInit {
     alert(x);
   }
 
+=======
+  
+  // toggleDisplayDiv() {
+  //   this.isShowDiv = !this.isShowDiv;
+  // }
+
+  // clickMe(operations: string) {
+  //  let x = operations == 'INC' ? this.hello : this.bye;
+  //   alert(operations);
+  //   alert(x);
+  // }
+
+>>>>>>> SomeEdits
 }

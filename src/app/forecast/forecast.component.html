@@ -1,11 +1,64 @@
+<<<<<<< HEAD
 <br><br>
 
+=======
+
+<br><br>
+<div class="container">
+<div class="row">
+<div class="w3-center">
+  <div class="card"><br>
+      <div class="form">
+          <!-- <a class="form-btn" href="#" type="button" (click)=toggleDisplayDiv()>Click</a>  -->
+          <div class="searchform" [hidden]="false"> 
+          <input class="form-control" type="text"#userInput placeholder="City Name">
+              <div class="input-group-append" id="fold">
+                  <button class="input-group-text btn btn-outline-primary" id="fold_p" (click)="getCity(userInput.value)"><i class="fa fa-search"></i></button>
+              </div>
+          </div>
+      </div><br>
+      <div *ngIf="showweather">
+      <div class="content" *ngIf="!isNight">
+          <i class="fa fa-sun-o" aria-hidden="true"></i>
+      </div>
+      <div class="content" *ngIf="isNight">
+          <i class="fa fa-moon-o" aria-hidden="true"></i>
+      </div>
+      <br>
+      <div class="content" style="font-size: 12px;">
+          {{temp_celcius}}°C                     
+      </div><br>
+      <!-- <div class="content" style="font-size: 12px;">
+          {{temp_min}}°C / {{temp_max}}°C
+      </div><br> -->
+      <div class="content">
+          {{weather.name}}, {{weather.country}}
+      </div><br>
+      <div class="content" style="font-size: 12px;">
+          Humidity: {{weather.main.humidity}}%
+      </div><br>
+      <div class="content" style="font-size: 12px;">
+        Precipitation: {{weather.clouds.all}}%
+    </div><br>
+    <div class="content" style="font-size: 12px;">
+      Wind Details-> Speed: {{weather.wind.speed}} | Deg: {{weather.wind.deg}}
+  </div><br>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+<br><br>
+<!-- <button (click)="cons()" >Console</button> -->
+>>>>>>> SomeEdits
     <div class="cards text-center m-3">
         <h3 class="card-header">Countries and Cities</h3>
         <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
             <thead>
               <tr>
                 <th class="th-sm">Country</th>
+<<<<<<< HEAD
                 <th class="th-sm">Capital</th>
                 <th class="th-sm">Action</th>
               </tr>
@@ -16,6 +69,21 @@
                     <td>{{item.id}}</td>
                     <td>
                         <a href="#" routerLink="/details" type="button" class="btn btn-info">View Weather</a>
+=======
+                <!-- <th class="th-sm">Capital</th> -->
+                <th class="th-sm">Action</th>
+              </tr>
+            </thead>
+            <!-- <h1>hai kuch</h1> -->
+            <tbody>
+              <!-- <h1>hai kuch</h1> -->
+                <tr *ngFor="let item of WeatherD" style="color:black;" style="background-color: burlywood;">
+                    <td>{{item.name}}</td>
+                    <!-- <td>{{item.id}}</td> -->
+                    <td>
+                     
+                        <a href="#"  routerLink="/details" type="button"  (click)="serve(item.name)" class="btn btn-info">View Weather</a>
+>>>>>>> SomeEdits
                     </td>
                   </tr>
                   

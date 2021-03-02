@@ -6,13 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class ClimateService {
 
-<<<<<<< HEAD
-  weather: any;
-=======
   cityname: any;
   weatherdetails:any;
   weathershowdetails:boolean=false;
->>>>>>> SomeEdits
 
   url = 'https://api.openweathermap.org/data/2.5/weather';   //'https://restcountries.eu/rest/v2/all';
   apiKey = '794ee95e63c5a32aaf88cd813fa2e425';

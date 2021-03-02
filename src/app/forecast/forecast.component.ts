@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClimateService } from '../climate.service';
-import * as $ from 'jquery';
-<<<<<<< HEAD
-=======
-import { url } from 'inspector';
->>>>>>> SomeEdits
+// import * as $ from 'jquery';
+// import { url } from 'inspector';
 
 @Component({
   selector: 'app-forecast',
@@ -12,11 +9,6 @@ import { url } from 'inspector';
   styleUrls: ['./forecast.component.css']
 })
 export class ForecastComponent implements OnInit {
-<<<<<<< HEAD
- 
-  WeatherData: any;
-
-=======
 
   WeatherData: any;
   lat;
@@ -71,20 +63,10 @@ setWeatherData(data) {
   }
  
   WeatherD: any;
->>>>>>> SomeEdits
 
   constructor(private climateService: ClimateService) { }
 
   ngOnInit(): void {
-<<<<<<< HEAD
-   
-  this.climateService.sendGetRequest().subscribe(data =>{
-    console.log(data);
-    this.WeatherData = data;
-  }) 
-
-  }
-=======
   this.climateService.sendGetRequest().subscribe(data =>{
     // console.log(data);
     this.WeatherD = data;
@@ -97,5 +79,4 @@ setWeatherData(data) {
     console.log(this.climateService.cityname);
   }
 
->>>>>>> SomeEdits
 }

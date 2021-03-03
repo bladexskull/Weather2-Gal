@@ -8,4 +8,4 @@ If cloning then clone it in htdocs folder of xampp server, make sure you have al
 Open the folder of this repository in vscode or any other editor ,open terminal ,change the directory of terminal to this folder and run the following command:
 # npm install
 # ng serve
-
+ Link to deployed web app of the same https://weather-rahul.herokuapp.com/
